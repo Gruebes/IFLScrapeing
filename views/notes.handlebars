@@ -1,0 +1,22 @@
+
+<section class="hero is-primary">
+  <div class="hero-body">
+
+      {{>note/noteEditor}}
+
+  </div>
+</section>
+
+<section class="section is-light is-fullheight">
+    <div class="container">
+        <div class="columns is-multiline">
+
+            {{#each doc.note}}
+
+                {{>note/note}}
+
+            {{/each}}
+
+        </div>
+    </div>
+</section>

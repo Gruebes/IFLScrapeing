@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content">
+        <h1 class="title">{{doc.title}}</h1>
+        <form action="/notes/create/{{doc._id}}" method="post">
+            <div class="field">
+                <p class="control">
+                    <input class="input" type="text" placeholder="Give this note a title!" name="title">
+                </p>
+                <p class="control">
+                    <input class="input textarea" type="text" placeholder="Add a note for this article..." name="body"></input>
+                </p>
+            </div>
+            <button type="submit" class="button is-info">Add Note</button>
+        </form>
+    </div>
+</div>

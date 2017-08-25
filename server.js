@@ -1,5 +1,5 @@
 const express = require("express");
-const hbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
@@ -18,11 +18,17 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+// set exphbs
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Make public a static dir
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use("/public", express.static(__dirname + '/public'));
+
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://localhost/iflscraper");
 const db = mongoose.connection;
 
 // Show any mongoose errors
@@ -35,6 +41,8 @@ db.once("open", function() {
     console.log("Mongoose connection successful.");
 });
 
+// Routes to use
+require("./routes/html-routes.js")(app)
 require("./routes/article-routes.js")(app, request);
 require("./routes/note-routes.js")(app)
 

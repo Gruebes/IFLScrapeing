@@ -1,0 +1,20 @@
+<nav class="level is-mobile">
+    <div class="level-right">
+        <a class="level-item" href="{{link}}" target="_blank">
+            <span class="icon is-medium"><i class="fa fa-external-link" alt="Link"></i></span>
+        </a>
+        {{#if saved}}
+        <form action="/notes/{{_id}}" method="get">
+            <input class="level-item" id="{{_id}}" type="hidden" >
+                <button id="noStyle" type="submit"><span class="icon is-medium"><i class="fa fa-sticky-note-o"></i></span></button>
+            </input>
+        </form>
+        {{else}}
+        <form action="/article/save/{{this._id}}" method="POST">
+            <input class="level-item" id="{{_id}}"  type="hidden" name="saved" value="true" >
+                <button id="noStyle" type="submit"><span class="icon is-medium"><i class="fa fa-bookmark-o"></i></span></button>
+            </input>
+        </form>
+        {{/if}}
+    </div>
+</nav>

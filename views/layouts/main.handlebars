@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+	<title>IFLSCRAPING</title>
+
+</head>
+<body>
+
+	
+<nav class="navbar">
+	<div class="navbar-brand">
+		<a href="/" class="navbar-item">
+
+			<span class="icon">
+			<i class="fa fa-rocket"></i>
+			</span>
+
+			<p id="brand-text level"> IFLSCRAPING</p>
+		</a>
+	</div>
+	<div class="navbar-menu">
+		<div class="navbar-end">
+
+			<div class="navbar-item">
+				<p class="control">
+					<a class="button is-primary" href="/scrape">
+					<span class="icon">
+						<i class="fa fa-clone"></i>
+					</span>
+					<span>Scrape Artices</span>
+					</a>
+        		</p>
+			</div>
+			<div class="navbar-item">
+				<p class="control">
+					<a class="button is-warning" href="/articles/saved">
+					<span class="icon">
+						<i class="fa fa-bookmark-o"></i>
+					</span>
+					<span>Saved Artices</span>
+					</a>
+        		</p>
+			</div>
+
+		</div>
+	</div>
+</nav>
+	
+	{{{ body }}}
+
+<footer class="hero is-success">
+	<div class="hero-body has-text-centered">
+		<p>
+			<strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+			<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+		</p>
+		<p>
+			<a class="icon" href="https://github.com/jgthms/bulma">
+				<i class="fa fa-github"></i>
+			</a>
+		</p>
+	</div>
+</footer>
+		
+
+
+{{!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':3000/livereload.js?snipver=1"></' + 'script>')</script> --}}
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/public/js/main.js"></script>
+
+
+
+
+</body>
+</html>

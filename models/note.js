@@ -12,7 +12,11 @@ var NoteSchema = new Schema({
     // Just a string
     body: {
         type: String
-    }
+    },
+    userCreated: {
+        type: Date,
+        default: Date.now
+    },
 });
 
 // Remember, Mongoose will automatically save the ObjectIds of the notes
