@@ -28,10 +28,10 @@ app.use("/public", express.static(__dirname + '/public'));
 
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/iflscraper");
+mongoose.connect("mongodb://heroku_xl9q0rn0:3cphsig1q2i1qgq34kebeufv1g@ds155587.mlab.com:55587/heroku_xl9q0rn0");
 
 //*** WARNING *** THIS WILL CLEAR DATABASE
-mongoose.connection.dropDatabase();
+// mongoose.connection.dropDatabase();
 
 const db = mongoose.connection;
 
