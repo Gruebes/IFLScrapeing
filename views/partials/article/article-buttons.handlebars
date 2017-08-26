@@ -2,7 +2,7 @@
 
     <div class="level-left">
         <a class="level-item" href="{{link}}" target="_blank">
-            <span class="icon is-medium"><i class="fa fa-external-link" alt="Link"></i></span>
+            <span id="link-button" class="icon is-medium"><i class="fa fa-external-link" alt="Link"></i></span>
         </a>
         {{#if saved}}
         <form action="/article/save/{{this._id}}" method="POST">

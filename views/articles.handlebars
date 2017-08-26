@@ -1,16 +1,32 @@
 <section class="hero is-primary">
   <div class="hero-body">
     <div class="container">
-      <h1 class="is-1 text-is-centered">
-        <i class="fa fa-rocket" aria-hidden="true"></i> IFLSCPAPING
+
+      {{#if article}}
+
+      <h1 class="title is-3 has-text-centered">
+        Bookmark and Comment
       </h1>
+
+      {{else}}
+
+      <h1 class="title is-3 has-text-centered">
+        Start by adding some articles
+      </h1>
+
+      {{/if}}
 
     </div>
   </div>
 </section>
 
-<div id="article-container" class="container">
+
+
+<section class="hero is-light is-fullheight">
+  <div id="article-container" class="container">
     
     {{>article/article}}
     
-</div>
+  </div>
+  
+</section>

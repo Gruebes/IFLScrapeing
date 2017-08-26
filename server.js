@@ -29,6 +29,10 @@ app.use("/public", express.static(__dirname + '/public'));
 
 // Database configuration with mongoose
 mongoose.connect("mongodb://localhost/iflscraper");
+
+//*** WARNING *** THIS WILL CLEAR DATABASE
+mongoose.connection.dropDatabase();
+
 const db = mongoose.connection;
 
 // Show any mongoose errors

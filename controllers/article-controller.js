@@ -20,6 +20,7 @@ let scrape = (req, res) => {
             result.title = $(this).children("a").last().attr("title");
             result.link = $(this).children("a").last().attr("href");
             result.image = $(this).children("a").last().children("div.img-wrapper").children("picture").children("source").attr("data-srcset");
+            result.date = $(this).next('div.content').children("span.date").text()
 
             // Using our Article model, create a new entry
             // This effectively passes the result object to the entry (and the title and link)

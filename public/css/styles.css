@@ -11,6 +11,14 @@
     padding: 0px 6px 5.3px 0px;
 }
 
+#link-button {
+    color: #00d1b2;
+}
+
+#comment-card {
+    margin-top: 1rem;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -52,8 +60,4 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
-
-footer {
-    margin-top: 50px;
 }

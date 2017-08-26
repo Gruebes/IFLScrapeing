@@ -32,16 +32,6 @@ let createNote = (req, res) => {
     });
 }
 
-// let getAllNotes = (req, res) => {
-//     Article.findOne({ _id: req.params._id }).populate({ path: "note", options: { sort: { '_id': -1 } } }).exec((error, doc) => {
-//         if (error) {
-//             console.log(error);
-//         } else {
-//             res.render('notes', { doc })
-//         }
-//     });
-// }
-
 let removeNote = (req, res) => {
     console.log(req.headers.referer);
 
