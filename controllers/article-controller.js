@@ -60,7 +60,7 @@ let getArticles = (req, res) => {
 let save = (req, res) => {
 
     Article.findOneAndUpdate({
-        "_id": req.params.id
+        "_id": req.params._id
     }, { $set: { "saved": req.body.saved } }, (error, doc) => {
         if (error) {
             console.log(error);
@@ -68,6 +68,17 @@ let save = (req, res) => {
             res.redirect("/")
         }
     });
+
+};
+
+let remove = (req, res) => {
+    Article.findOneAndRemove({ _id: req.params._id }, (error, doc) => {
+        if (error) {
+            console.log(error)
+        } else {
+            res.redirect("/")
+        }
+    })
 
 };
 
@@ -98,4 +109,4 @@ let getArticleNotes = (req, res) => {
     });
 }
 
-module.exports = { scrape, getArticles, save, getSavedArticles, getArticleNotes };
+module.exports = { scrape, getArticles, save, remove, getSavedArticles, getArticleNotes };

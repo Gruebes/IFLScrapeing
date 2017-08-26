@@ -1,3 +1,7 @@
+#article-container {
+    margin: 40px auto;
+}
+
 #noStyle {
     background: none;
     cursor: pointer;

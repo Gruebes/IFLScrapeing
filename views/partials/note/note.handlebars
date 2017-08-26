@@ -8,18 +8,12 @@
 				{{body}}
 			</p>
 			<small>{{userCreated}}</small>
+
+		<div class="is-pulled-right">
+			<form action="/note/remove/{{this._id}}" method="POST">
+				<button class="button is-danger" type="submit">Delete</button>
+			</form>
 		</div>
-		<footer class="card-footer">
-			<p class="card-footer-item">
-				<span>
-					<a href="#">Edit</a>
-				</span>
-			</p>
-			<p class="card-footer-item">
-				<span>
-					 <a href="#">Delete</a>
-				</span>
-			</p>
-		</footer>
+		</div>
 	</div>
 </div>

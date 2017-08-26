@@ -24,7 +24,7 @@ let createNote = (req, res) => {
                     } else {
                         // Call function to return Article and its notes
                         console.log(`createNotes... ${newDoc}`);
-                        getAllNotes(req, res)
+                        res.redirect("back")
 
                     }
                 });
@@ -32,19 +32,29 @@ let createNote = (req, res) => {
     });
 }
 
-let getAllNotes = (req, res) => {
-    Article.findOne({ _id: req.params._id }).populate({ path: "note", options: { sort: { '_id': -1 } } }).exec((error, doc) => {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log(`getAllNotes... ${doc}`);
+// let getAllNotes = (req, res) => {
+//     Article.findOne({ _id: req.params._id }).populate({ path: "note", options: { sort: { '_id': -1 } } }).exec((error, doc) => {
+//         if (error) {
+//             console.log(error);
+//         } else {
+//             res.render('notes', { doc })
+//         }
+//     });
+// }
 
-            res.render('notes', { doc })
+let removeNote = (req, res) => {
+    console.log(req.headers.referer);
+
+    Note.findByIdAndRemove(req.params._id, (error, doc) => {
+        if (error) {
+            console.log(error)
+        } else {
+            res.redirect("back");
         }
     });
-}
+};
 
 
 
 
-module.exports = { createNote, getAllNotes };
+module.exports = { createNote, removeNote };

@@ -1,32 +1,25 @@
-
-
 <div class="columns is-multiline">
-{{#each article}}
-	<div class="column is-one-quarter">
+	{{#each article}}
+		<div class="column is-one-quarter">
 
-    <div class="card">
-		<div class="card-image">
-			<figure class="image is-4by3">
-			<img src="{{image}}" alt="Image">
-			</figure>
-		</div>
-		<div class="card-content">
-			<div class="media">
-				<div class="media-content">
-					<p class="title is-4">{{title}}</p>
-					<p class="subtitle is-6"{{date}}</p>
+			<div id="article-card" class="card">
+				<div class="card-image">
+					<figure class="image is-4by3">
+					<img src="{{image}}" alt="Image">
+					</figure>
+				</div>
+				<div class="card-content">
+					<div class="media">
+						<div class="media-content">
+							<p class="title is-4">{{title}}</p>
+							<p class="subtitle is-6"{{date}}</p>
+						</div>
+					</div>
+					{{>article/article-buttons}}
 				</div>
 			</div>
-			{{>article/article-buttons}}
+
 		</div>
-    </div>
 
-	</div>
-
-{{/each}}
+	{{/each}}
 </div>
-
-
-
-
-
